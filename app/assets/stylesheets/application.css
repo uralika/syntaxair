@@ -5,17 +5,40 @@ body {
 .navbar {
 	height: 50px;
 	width: 100%;
-	background-color: gray;
+	border-bottom: solid 1px rgba(0, 200, 200, .2);
+}
+
+.container {
+	height: 100%;
+	width: 500px;
+	margin: 0 auto;
 }
 
 .branding {
-	padding-top: 20px;
-	height: 200px;
+	height: 150px;
 	width: 100%;
 	font-family: Mensch;
 	font-size: 150px;
 	text-align: center;
 	color: rgba(0, 200, 200, .8);
+	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/syntax_air_branding.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 500px;
+}
+
+.placeholder {
+	color: white;
+}
+
+.icon {
+	height: 50px;
+	width: 100px;
+	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/SA.png);
+	background-repeat: no-repeat;
+	background-position: center;
+	float: left;
+	background-size: 50px;
 }
 
 input {
@@ -25,13 +48,33 @@ input {
 	height: 100%;
 	border: 0;
 	background-color: #EEE;
+	border-radius: 3px;
+}
+
+button {
+	border: 0;
+	height: 24px;
+	background-color: #EEE;
+	color: rgba(0, 200, 200, .5);
+	margin: 0;
+}
+
+.login {
+	height: 20px;
+	width: 75px;
+	float: right;
+	padding-right: 7px;
+}
+
+.login input {
+	background-color: rgba(0, 200, 200, .05);
+	border-radius: 0px;
+	border: solid 1px rgba(0, 200, 200, .02);
 }
 
 .search {
 	height: 50px;
 	width: 500px;
-	position: relative;
-	margin: 0 auto;
 }
 
 .post {
