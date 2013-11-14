@@ -1,19 +1,20 @@
-require 'bcrypt'
-
-class User
-  include Mongoid::Document
-
-  attr_accessor :password, :password_confirmation
-
-  field :email, type: String
-  field :salt, type: String
-  field :hashed_password, type: String
-
-  has_and_belongs_to_many :uimages, class_name: 'Image', inverse_of: :iusers
+class User < ActiveRecord::Base
+  require 'bcrypt'
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
+
+  def userdef
+    @email = email
+    @salt = salt
+    @hashed_password = hashed_password
+  end
+
+
+  attr_accessor :password, :password_confirmation
+
+  has_many :scraps
 
   before_save :hash_password
 
@@ -32,4 +33,6 @@ class User
     end
   end
 end
+
+
 

@@ -6,6 +6,8 @@ Syntaxair::Application.routes.draw do
 root to: 'users#home'
 
 resources :scraps
+
+resources :users, only: [:new, :create]
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -8,4 +8,6 @@ class Scrap < ActiveRecord::Base
 		# "Searched by #{@search_tag}, here: #{@body}"
 	end
 
+	belongs_to :user
+
 end

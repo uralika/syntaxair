@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131113234901) do
+ActiveRecord::Schema.define(version: 20131114012729) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,17 @@ ActiveRecord::Schema.define(version: 20131113234901) do
     t.string   "body"
     t.string   "search_tag"
     t.integer  "vote_number"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+  end
+
+  add_index "scraps", ["user_id"], name: "index_scraps_on_user_id", using: :btree
+
+  create_table "users", force: true do |t|
+    t.string   "email"
+    t.string   "salt"
+    t.string   "hashed_password"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
