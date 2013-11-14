@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @scrap.search_tag %>
+</p>
+
+<p>
+  <strong>Kill count:</strong>
+  <%= @scrap.body %>
+</p>
+
+<%= link_to 'Edit', edit_scrap_path(@scrap) %> |
+<%= link_to 'Back', robots_path %>

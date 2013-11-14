@@ -1,0 +1,13 @@
+Scraps!
+
+<% @scraps.each do |s| %>
+
+<p>Scrap <%= s.body %>.
+	<%= link_to 'Show', s %>
+
+<%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+
+<% end %>
+
+<br />
+<%= link_to 'New Scrap', new_scrap_path %>

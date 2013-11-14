@@ -1,0 +1,6 @@
+I'm new!<br />
+<%= form_for @scrap do |s| %>
+<%= s.text_field :search_tag, placeholder: 'Search Tag' %><br />
+<%= s.text_field :body, placeholder: 'Code Scrap' %><br />
+<%= s.submit %>
+<% end %>
