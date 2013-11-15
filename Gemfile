@@ -35,6 +35,10 @@ end
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 
+group :development, :test do
+	gem 'rspec-rails'
+end
+
 # Use unicorn as the app server
 # gem 'unicorn'
 
