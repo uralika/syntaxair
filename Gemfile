@@ -37,6 +37,12 @@ gem 'bcrypt-ruby', github: 'codahale/bcrypt-ruby'
 
 group :development, :test do
 	gem 'rspec-rails'
+	gem 'factory_girl_rails'
+end
+
+group :test do 
+    gem 'capybara' 
+    gem 'guard-rspec' 
 end
 
 # Use unicorn as the app server
