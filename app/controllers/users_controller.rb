@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   def create
   	@users = User.create(params[:user].permit(:email, :password, :password_confirmation))
   	# redirect_to :action => "new"
-    redirect_to images_url
+    redirect_to root_url
   end
 
   def destroy
