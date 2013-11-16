@@ -16,7 +16,12 @@
 <div class="container">
   <div class="branding"></div>
 </div>
-
+ <% if current_user %>
+                <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
+                <% end %>
+                 <% if current_user %>
+                <%= button_to "Log out", "/users/new", method: :delete %>
+                <% end %>
 <%= yield %>
 
 </body>

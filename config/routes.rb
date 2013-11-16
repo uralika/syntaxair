@@ -8,7 +8,10 @@ root to: 'users#home'
 resources :scraps
 
 resources :users, only: [:new, :create]
-  # Example of regular route:
+delete '/users/new' => 'authentications#destroy'
+
+
+  # Example of regular rosute:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
