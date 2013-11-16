@@ -1,6 +1,6 @@
 class ScrapsController < ApplicationController
 	def index
-		@scraps = Scrap.all
+		@scraps = current_user.scraps
 		# @scrap_models = Scrap.select(:body).distinct.order(:body)
 	end
 
