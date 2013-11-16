@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
   require 'bcrypt'
 
+  has_many :scraps
+
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
   validates :password, confirmation: true
@@ -11,10 +13,7 @@ class User < ActiveRecord::Base
     @hashed_password = hashed_password
   end
 
-
   attr_accessor :password, :password_confirmation
-
-  has_many :scraps
 
   before_save :hash_password
 

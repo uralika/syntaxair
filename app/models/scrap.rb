@@ -1,4 +1,6 @@
 class Scrap < ActiveRecord::Base
+  belongs_to :user
+
 	validates :search_tag, presence: true
 	validates :body, presence: true
 
@@ -7,7 +9,5 @@ class Scrap < ActiveRecord::Base
 		@body = body
 		# "Searched by #{@search_tag}, here: #{@body}"
 	end
-
-	belongs_to :user
 
 end

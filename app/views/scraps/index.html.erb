@@ -2,7 +2,7 @@ Scraps!
 
 <% @scraps.each do |s| %>
 
-<p>Scrap <%= s.body %>.
+<p><%= s.body %>.
 	<%= link_to 'Show', s %>
 
 <%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></p>

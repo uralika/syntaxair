@@ -34,23 +34,6 @@ ActiveRecord::Schema.define(version: 20131114013312) do
 
   add_index "scraps", ["user_id"], name: "index_scraps_on_user_id", using: :btree
 
-  create_table "user_attrs", force: true do |t|
-    t.string   "password"
-    t.string   "hashed_password"
-    t.string   "email"
-    t.string   "salt"
-    t.integer  "user_name_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "user_attrs", ["user_name_id"], name: "index_user_attrs_on_user_name_id", using: :btree
-
-  create_table "user_names", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "salt"

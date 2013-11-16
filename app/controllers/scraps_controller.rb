@@ -17,7 +17,7 @@ class ScrapsController < ApplicationController
 	end
 
 	def create
-  	@scrap = Scrap.create(params.require(:scrap).permit(:search_tag, :body))
+  	@scrap = current_user.scraps.create(params.require(:scrap).permit(:search_tag, :body))
   	if @scrap.valid?
   		redirect_to scraps_url
   	else
