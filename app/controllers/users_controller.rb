@@ -13,16 +13,18 @@ class UsersController < ApplicationController
 
   def create
   	@user = User.create(params[:user].permit(:email, :password, :password_confirmation))
-  	 if @user.save
-        session[:user_id] = @user.id
-        redirect_to root_url
-     else
-        redirect_to action:"new"
-      end
+	  if @user.save
+      session[:user_id] = @user.id
+      redirect_to root_url
+    else
+      redirect_to action:"new"
     end
   end
+  
 
-   def destroy
-     User.find(params[:id]).destroy
-      redirect_to root_url
-     end
+  def destroy
+    User.find(params[:id]).destroy
+    redirect_to root_url
+  end
+
+end
