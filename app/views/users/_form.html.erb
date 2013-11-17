@@ -1,4 +1,4 @@
-<%= form_for @user do |u| %>
+<%= form_for User.new do |u| %>
 
 <div class='container'>
   <%=u.text_field :email, placeholder: 'email' %><br />

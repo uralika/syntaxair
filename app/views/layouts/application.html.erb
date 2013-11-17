@@ -10,6 +10,7 @@
   
   <div class="navbar">
     <a href="/"><div class="icon"></div></a>
+    <!-- start if statement for login vs. logged in -->
     <% if current_user %>
     <div class="login">
       <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
@@ -17,15 +18,16 @@
     </div>
     <% else %>
     <div class="login">
-      <%= form_for User.new, {url:"/authentications", method:"post"} do |u| %>
-      <p>
-        <%= u.text_field :email, placeholder: "email" %>
-        <%= u.password_field :password, placeholder: "password" %>
-        <%= button_to "login"%>
-      </p>
-      <% end %>
+    <%= form_for User.new, {url:"/authentications", method:"post"} do |u| %>
+    <p>
+      <%= u.text_field :email, placeholder: "email" %>
+      <%= u.password_field :password, placeholder: "password" %>
+      <%= button_to "login"%>
+    </p>
+    <% end %>
+    <% end %>
     </div>
-  <% end %>
+    <!-- end if statement -->
   </div>
 
   <div class="container">

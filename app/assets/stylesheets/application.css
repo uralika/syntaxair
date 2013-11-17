@@ -76,6 +76,13 @@ input[type=submit] {
 	border: solid 1px rgba(0, 200, 200, .02);
 }
 
+.signup {
+	margin: 0 auto;
+	height: 50px;
+	width: 500px;
+
+}
+
 .search {
 	height: 50px;
 	width: 500px;
@@ -88,4 +95,8 @@ input[type=submit] {
 	margin: 0 auto;
 }
 
+.center {
+	position: relative;
+	left: 215px;
+}
 
