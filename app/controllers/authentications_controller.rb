@@ -16,7 +16,8 @@ class AuthenticationsController < ApplicationController
             if user.authenticate(params[:user][:password]) && if session[:user_id] = user.id
                 redirect_to root_url
             else 
-                redirect_to users_new_url 
+                flash.now.alert = "Unable to sign you in. Please try again."
+                redirect_to root_url
             end
             end
         end
@@ -24,7 +25,7 @@ class AuthenticationsController < ApplicationController
 
     def destroy
         session[:user_id] = nil
-        redirect_to users_new_url,
+        redirect_to root_url,
         notice: "You signed out."    
     end
 

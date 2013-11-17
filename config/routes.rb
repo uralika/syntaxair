@@ -10,6 +10,8 @@ resources :scraps
 resources :users, only: [:new, :create]
 delete '/users/new' => 'authentications#destroy'
 
+resources :authentications, only: [:new, :create]
+
 
   # Example of regular rosute:
   #   get 'products/:id' => 'catalog#view'

@@ -47,13 +47,15 @@ input {
 	width: 100%;
 	height: 100%;
 	border: 0;
+	float: left;
 	background-color: #EEE;
 	border-radius: 3px;
 }
 
-button {
+input[type=submit] {
 	border: 0;
-	height: 24px;
+	height: 17px;
+	width: 75px;
 	background-color: #EEE;
 	color: rgba(0, 200, 200, .5);
 	margin: 0;
@@ -61,12 +63,14 @@ button {
 
 .login {
 	height: 20px;
-	width: 75px;
+	width: 250px;
 	float: right;
 	padding-right: 7px;
 }
 
 .login input {
+	width: 75px;
+	margin-right: 3px;
 	background-color: rgba(0, 200, 200, .05);
 	border-radius: 0px;
 	border: solid 1px rgba(0, 200, 200, .02);
