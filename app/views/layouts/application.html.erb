@@ -15,6 +15,7 @@
     <div class="login">
       <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
       <%= button_to "Log out", "/users/new", method: :delete %>
+      <%= button_to "Post scrap", "/scraps/new" %>
     </div>
     <% else %>
     <div class="login">
@@ -32,11 +33,11 @@
 
   <% if current_user %>
     <div class="container">
-      <div class="branding_small"></div>
+      <a href="/"><div class="branding_small"></div></a>
     </div>
   <% else %>
     <div class="container">
-      <div class="branding"></div>
+      <a href="/"><div class="branding"></div></a>
     </div>
   <% end %>
 

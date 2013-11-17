@@ -6,6 +6,7 @@ Syntaxair::Application.routes.draw do
 root to: 'users#home'
 
 resources :scraps
+post '/scraps/new' => 'scraps#new'
 
 resources :users, only: [:new, :create]
 delete '/users/new' => 'authentications#destroy'
