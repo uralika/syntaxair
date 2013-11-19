@@ -1,0 +1,7 @@
+<% @users.each do |follow| %>
+
+<%= follow.email %>
+
+<%= button_to "X", "/users/#{follow.id}/i_follow", method: :post %></div>
+
+<% end %>

@@ -29,6 +29,7 @@ class UsersController < ApplicationController
   def follow(i_follow)
     self.i_follows << Follower.find(i_follow)
     self.save
+    redirect_to user_path
   end
 
 end
