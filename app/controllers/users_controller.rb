@@ -26,10 +26,9 @@ class UsersController < ApplicationController
     redirect_to root_url
   end
 
-  def follow(i_follow)
-    self.i_follows << Follower.find(i_follow)
-    self.save
-    redirect_to user_path
+  def follow
+    current_user.follow(params[:id])
+    redirect_to users_path
   end
 
 end
