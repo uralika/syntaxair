@@ -2,6 +2,8 @@ class User < ActiveRecord::Base
   require 'bcrypt'
 
   has_many :scraps
+  has_many :i_follows, class_name: 'Follower', foreign_key: 'follows_me_id'
+  has_many :follows_mes, class_name: 'Follower', foreign_key: 'i_follow_id'
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }
