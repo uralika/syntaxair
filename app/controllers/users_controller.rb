@@ -28,7 +28,8 @@ class UsersController < ApplicationController
 
   def follow
     current_user.follow(params[:id])
-    redirect_to users_path
+    redirect_to users_path, 
+    notice: 'Follower was successfully updated.'
   end
 
 end

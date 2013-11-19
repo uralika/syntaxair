@@ -25,8 +25,6 @@ class User < ActiveRecord::Base
   end
 
   def follow(i_follow)
-    # self.i_follows << Follower.find(i_follow)
-    # User.find(7).i_follows.create(i_follow:User.find(8))
     self.i_follows.create(i_follow: User.find(i_follow))
   end
 
