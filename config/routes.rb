@@ -13,6 +13,8 @@ delete '/users/new' => 'authentications#destroy'
 
 resources :authentications, only: [:new, :create]
 
+post '/users/:id/i_follow' => 'users#follow'
+
 
   # Example of regular rosute:
   #   get 'products/:id' => 'catalog#view'

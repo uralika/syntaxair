@@ -21,10 +21,14 @@ class UsersController < ApplicationController
     end
   end
   
-
   def destroy
     User.find(params[:id]).destroy
     redirect_to root_url
+  end
+
+  def follow(i_follow)
+    self.i_follows << Follower.find(i_follow)
+    self.save
   end
 
 end
