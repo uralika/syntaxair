@@ -21,10 +21,15 @@ class UsersController < ApplicationController
     end
   end
   
-
   def destroy
     User.find(params[:id]).destroy
     redirect_to root_url
+  end
+
+  def follow
+    current_user.follow(params[:id])
+    redirect_to users_path, 
+    notice: 'Follower was successfully updated.'
   end
 
 end
