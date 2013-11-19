@@ -47,7 +47,10 @@ group :test do
     gem 'guard-rspec' 
 end
 
-gem 'rails_12factor', group: :production
+group :production do
+  gem 'rails_12factor'
+  gem 'thin'
+end
 
 # Use unicorn as the app server
 # gem 'unicorn'
