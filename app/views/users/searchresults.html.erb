@@ -1,0 +1,6 @@
+  <ul>
+    <% @scraps.each do |scrap| %>
+  <li><%= link_to scrap.search_tag, 
+    :action => 'show', :id => scrap.id  %></li>
+  <% end %>
+  </ul>

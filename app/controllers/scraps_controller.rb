@@ -9,12 +9,23 @@ class ScrapsController < ApplicationController
 	end
 
 	def new
-  	@scrap = Scrap.new
+  		@scrap = Scrap.new
  	end
 
 	def show
 	  @scrap = Scrap.find(params[:id])
 	end
+
+	def search
+	end
+	#display results
+	# Displays results
+  def search_results
+    @scraps = Scrap.search(params[:search])
+  
+    #render :search_results
+  end
+
 
 	def create
   	@scrap = current_user.scraps.create(params.require(:scrap).permit(:search_tag, :body))
