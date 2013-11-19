@@ -4,8 +4,13 @@ class Scrap < ActiveRecord::Base
 	validates :search_tag, presence: true
 	validates :body, presence: true
 
-	def scrapdef
-		@search_tag = search_tag
+	def self.search(search)
+		search_condition = "%" + search + "%"
+		where('search_tag LIKE ? OR body LIKE ?', search_condition, search_condition)
+	end
+
+	 def scrapdef
+	 	@search_tag = search_tag
 		@body = body
 		# "Searched by #{@search_tag}, here: #{@body}"
 	end

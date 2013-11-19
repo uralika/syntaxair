@@ -13,6 +13,9 @@ delete '/users/new' => 'authentications#destroy'
 
 resources :authentications, only: [:new, :create]
 
+get 'search' => 'scraps#search'
+post 'search' => 'scraps#search_results'
+
 
   # Example of regular rosute:
   #   get 'products/:id' => 'catalog#view'

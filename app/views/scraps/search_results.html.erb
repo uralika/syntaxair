@@ -1,0 +1,5 @@
+<ul>
+  <% @scraps.each do |scrap| %>
+<li><%= link_to scrap.search_tag, scrap_path(scrap)  %></li>
+  <% end %>
+</ul>
