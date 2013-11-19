@@ -8,7 +8,7 @@ root to: 'users#home'
 resources :scraps
 post '/scraps/new' => 'scraps#new'
 
-resources :users, only: [:new, :create]
+resources :users, only: [:new, :create, :index]
 delete '/users/new' => 'authentications#destroy'
 
 resources :authentications, only: [:new, :create]
