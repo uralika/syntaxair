@@ -32,4 +32,8 @@ class UsersController < ApplicationController
     notice: 'Follower was successfully updated.'
   end
 
+  def home
+    @followers = Follower.all
+  end
+
 end

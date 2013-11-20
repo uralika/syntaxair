@@ -2,9 +2,25 @@
   <div class="container">
     <div class="search"><input type="text" placeholder="search"></input></div>
     <br />
-    
-  <!--   <div class="post"><input type="text" placeholder="post"></input></div>
-  </div> -->
+  </div>
+
+
+<!-- renders scrap body -->
+<div>
+  <% current_user.i_follows.each do |f| %>
+    <div>
+    <%= f.i_follow_id %>
+    </div>
+    <br />
+    <% f.i_follow.scraps.each do |s| %> 
+      <%= s.body %>
+      <% end %>
+      <% end %>
+</div>
+<br />
+<!-- renders scrap body END -->
+
+  
 <% else %>
   <div class="container">
     <div class="search"><input type="text" placeholder="search"></input></div>
