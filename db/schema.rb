@@ -11,9 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-
-ActiveRecord::Schema.define(version: 20131118233936) do
-
+ActiveRecord::Schema.define(version: 20131120194243) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,6 +36,23 @@ ActiveRecord::Schema.define(version: 20131118233936) do
 
   add_index "scraps", ["user_id"], name: "index_scraps_on_user_id", using: :btree
 
+  create_table "user_attrs", force: true do |t|
+    t.string   "password"
+    t.string   "hashed_password"
+    t.string   "email"
+    t.string   "salt"
+    t.integer  "user_name_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "user_attrs", ["user_name_id"], name: "index_user_attrs_on_user_name_id", using: :btree
+
+  create_table "user_names", force: true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "salt"
@@ -45,5 +60,16 @@ ActiveRecord::Schema.define(version: 20131118233936) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "votes", force: true do |t|
+    t.integer  "vote_number"
+    t.integer  "user_id"
+    t.integer  "scrap_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "votes", ["scrap_id"], name: "index_votes_on_scrap_id", using: :btree
+  add_index "votes", ["user_id"], name: "index_votes_on_user_id", using: :btree
 
 end

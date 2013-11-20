@@ -4,6 +4,7 @@ class User < ActiveRecord::Base
   has_many :scraps
   has_many :i_follows, class_name: 'Follower', foreign_key: 'follows_me_id'
   has_many :follows_mes, class_name: 'Follower', foreign_key: 'i_follow_id'
+  has_many :votes, dependent: :destroy
 
   validates :email, presence: true
   validates :email, uniqueness: { case_sensitive: false }

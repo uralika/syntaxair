@@ -1,5 +1,6 @@
 class Scrap < ActiveRecord::Base
   belongs_to :user
+  has_many :votes, dependent: :destroy
 
 	validates :search_tag, presence: true
 	validates :body, presence: true
