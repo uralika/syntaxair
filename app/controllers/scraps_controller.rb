@@ -5,7 +5,7 @@ class ScrapsController < ApplicationController
 	end
 
 	def show_json
-	  # render json: Scrap.where(model: params[:model]).order(:scrap_name).reverse
+	  render json: @scraps = Scrap.all
 	end
 
 	def new
