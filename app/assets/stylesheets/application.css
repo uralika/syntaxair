@@ -91,6 +91,15 @@ input[type=submit] {
 	border: solid 1px rgba(0, 200, 200, .02);
 }
 
+#home_logout {
+	width: 200px;
+	height: 100px;
+	float: right;
+	margin-top: -50px;
+	margin-right: -65px;
+
+}
+
 .signup input{
 	position: relative;
 	left: 120px;

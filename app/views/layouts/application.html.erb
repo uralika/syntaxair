@@ -12,10 +12,13 @@
     <a href="/"><div class="icon"></div></a>
     <!-- start if statement for login vs. logged in -->
     <% if current_user %>
-    <div class="login">
+    <a href="/"><div class="branding_small"></div></a>
+    <div id="home_logout">
+      <div class="login">
       <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
       <%= button_to "Log out", "/users/new", method: :delete %>
       <%= button_to "Post scrap", "/scraps/new" %>
+      </div>
     </div>
     <% else %>
     <div class="login">
