@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :follower do
+  followers_name "MyFollowers"
+    model "MyFollowers"
   end
 end

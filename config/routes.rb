@@ -6,11 +6,18 @@ Syntaxair::Application.routes.draw do
 root to: 'users#home'
 
 resources :scraps
+post '/scraps/new' => 'scraps#new'
+get '/scraps/api' => 'scraps#show_json'
 
-resources :users, only: [:new, :create]
+resources :users, only: [:new, :create, :index]
 delete '/users/new' => 'authentications#destroy'
 
 resources :authentications, only: [:new, :create]
+
+get 'search' => 'scraps#search'
+post 'search' => 'scraps#search_results'
+
+post '/users/:id/i_follow' => 'users#follow'
 
 
   # Example of regular rosute:
