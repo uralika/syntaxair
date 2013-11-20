@@ -2,5 +2,7 @@
 
 FactoryGirl.define do
   factory :scrap do
+  scrap_name "MyScrap"
+    model "MyScrap"
   end
 end

@@ -7,7 +7,9 @@ root to: 'users#home'
 
 resources :scraps
 post '/scraps/new' => 'scraps#new'
+
 get '/scraps/index/api' => 'scraps#show_json'
+
 
 resources :users, only: [:new, :create, :index]
 delete '/users/new' => 'authentications#destroy'
