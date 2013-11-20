@@ -32,3 +32,41 @@
   <br />
   <%= render "users/form" %>
 <% end %>
+
+<script>
+  $(function(){
+
+  $("#listScraps").html(function(){
+
+    $.get("/scraps/index/api"),
+
+      listScraps
+    );
+  });
+
+  // $("#robot_model").prepend("<option>Choose one</option>");
+  // $("#robot_model")[0].selectedIndex = 0;
+
+});
+
+
+function listScraps(data){
+  var scrapList = "";
+  for(scrap in data)
+  {
+    scrapList += '<div>Scrap #' + data[scrap].scrap_body + '</div>';
+  }
+
+  $("#ScrapList").html(scrapList);
+}
+
+</script>
+
+
+***********************
+
+<br />
+
+<div id="ScrapList">Scraps</div>
+
+
