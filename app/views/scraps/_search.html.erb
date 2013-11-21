@@ -1,5 +1,5 @@
-<%= form_tag 'search', :method => 'post' do %>
-      <%= text_field_tag :search, params[:search], :id => 'search_field' %>
+  <%= form_tag 'search', :method => 'post' do %>
 
-      <%= link_to_function "Clear", "$('search_field').clear()" %>
-<% end %> 
+  <%= text_field_tag :search, params[:search], :id => 'search_field',  placeholder: "search", class: "search"  %>
+  <% end %> 
+

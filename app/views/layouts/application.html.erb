@@ -12,6 +12,7 @@
     <a href="/"><div class="icon"></div></a>
     <!-- start if statement for login vs. logged in -->
     <% if current_user %>
+   
     <a href="/"><div class="branding_small"></div></a>
     <div id="home_logout">
       <div class="login">
@@ -21,6 +22,7 @@
       </div>
     </div>
     <% else %>
+    <!-- ELSE statement for login vs. logged in -->
     <div class="login">
     <%= form_for User.new, {url:"/authentications", method:"post"} do |u| %>
     <p>
@@ -35,17 +37,18 @@
   </div>
 
   <% if current_user %>
+    
     <div class="container">
-    <%= render :partial => 'scraps/search' %>
-    </div>
-    <!--   <a href="/"><div class="branding_small"></div></a> -->
 
+    <%= render :partial => 'scraps/search' %>
+  
     </div>
+
   <% else %>
+  
     <div class="container">
       <a href="/"><div class="branding"></div></a>
     </div>
-    <div id="search">
   <% end %>
 
 
