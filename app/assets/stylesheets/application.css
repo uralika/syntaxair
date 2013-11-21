@@ -189,12 +189,16 @@ input[type=submit] {
 	width: 50px;
 }
 
-.icon-chevron-up {
-	font-size: 12px;
-
+#voteup {
+	height: 10px;
+	width: 10px;
+	outline: red;
 }
 
-.icon-chevron-down {
-
+#votedown {
+	height: 10px;
+	width: 10px;
+	outline: blue;
 }
+
 
