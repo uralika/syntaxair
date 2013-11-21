@@ -14,6 +14,15 @@ delete '/users/new' => 'authentications#destroy'
 
 resources :authentications, only: [:new, :create]
 
+
+resources :scraps, only: [:show] do
+  resources :scraps, only: [:create, :destroy]
+  get '/up-vote', to: 'votes#up_vote', as: :up_vote
+  get '/down-vote', to: 'votes#down_vote', as: :down_vote
+end
+
+
+
 get 'search' => 'scraps#search'
 post 'search' => 'scraps#search_results'
 post '/scraps/:id' => 'scraps#search_results'
