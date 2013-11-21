@@ -32,17 +32,19 @@ function listScraps(data){
 <% if current_user %>
 
 <!-- renders scrap body -->
-<div>
   <% current_user.i_follows.each do |f| %>
-    <div>
-    <%= f.i_follow_id %>
+  <% f.i_follow.scraps.each do |s| %> 
+
+    <div class="feed">
+    <div class="followerid">
+      <%= f.i_follow_id %>
     </div>
-    <br />
-    <% f.i_follow.scraps.each do |s| %> 
-      <%= s.body %>
+
+    <%= s.search_tag %>
+    <%= s.body %></div>
+
       <% end %>
       <% end %>
-</div>
 <br />
 <!-- renders scrap body END -->
 
