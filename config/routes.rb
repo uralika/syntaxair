@@ -18,6 +18,7 @@ resources :authentications, only: [:new, :create]
 
 get 'search' => 'scraps#search'
 post 'search' => 'scraps#search_results'
+post '/scraps/:id' => 'scraps#search_results'
 
 post '/users/:id/i_follow' => 'users#follow'
 

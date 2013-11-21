@@ -3,3 +3,19 @@
 <li><%= link_to scrap.search_tag, scrap_path(scrap)  %></li>
   <% end %>
 </ul>
+
+<% if current_user %>
+
+<% else %>
+
+<%= form_for User.new do |u| %>
+
+<div class='container signup'>
+  <%=u.text_field :email, placeholder: 'email' %><br />
+  <%=u.password_field :password, placeholder: 'password' %><br />
+  <%=u.password_field :password_confirmation, placeholder: 'confirm password'%><br />
+  <div class='center'><%= u.submit %><div> 
+</div>
+
+<% end %>
+<% end %>

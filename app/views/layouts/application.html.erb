@@ -12,12 +12,16 @@
     <a href="/"><div class="icon"></div></a>
     <!-- start if statement for login vs. logged in -->
     <% if current_user %>
-    <div class="login">
-      <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
-      <%= button_to "Log out", "/users/new", method: :delete %>
-      <%= button_to "Post scrap", "/scraps/new" %>
+   
+    <a href="/"><div class="branding_small"></div></a>
+    <div id="home_logout">
+      <div class="login">
+      <h1 class="logged"><%= current_user[:email] %></h1>
+      <%= button_to "Log out", "/users/new", method: :delete, id: 'logoutbutton' %>
+      </div>
     </div>
     <% else %>
+    <!-- ELSE statement for login vs. logged in -->
     <div class="login">
     <%= form_for User.new, {url:"/authentications", method:"post"} do |u| %>
     <p>
@@ -32,17 +36,20 @@
   </div>
 
   <% if current_user %>
+  <p><p/>
     <div class="container">
-    <%= render :partial => 'scraps/search' %>
-    </div>
-    <!--   <a href="/"><div class="branding_small"></div></a> -->
 
+    <%= render :partial => 'scraps/search' %>
+  
     </div>
+  <p class="hide">.<p/>
+<br />
+
   <% else %>
+  
     <div class="container">
       <a href="/"><div class="branding"></div></a>
     </div>
-    <div id="search">
   <% end %>
 
 

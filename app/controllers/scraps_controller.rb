@@ -1,19 +1,20 @@
 class ScrapsController < ApplicationController
+respond_to :html, :json
+
 	def index
 		@scraps = current_user.scraps
 		# @scrap_models = Scrap.select(:body).distinct.order(:body)
-	end
-
-	def show_json
-	  render json: @scraps = Scrap.all
+    respond_with(@scraps)
 	end
 
 	def new
   		@scrap = Scrap.new
+      respond_with(@scrap)
  	end
 
 	def show
 	  @scrap = Scrap.find(params[:id])
+    respond_with(@scrap)
 	end
 
 	def search
@@ -22,6 +23,7 @@ class ScrapsController < ApplicationController
 	# Displays results
   def search_results
     @scraps = Scrap.search(params[:search])
+    respond_with(@scrap)
   
     #render :search_results
   end

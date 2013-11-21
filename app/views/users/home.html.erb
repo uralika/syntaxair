@@ -1,29 +1,26 @@
-<% if current_user %>
-  <div class="container">
-    <div class="search"><input type="text" placeholder="search"></input></div>
-    <br />
-  </div>
 
+<% if current_user %>
 
 <!-- renders scrap body -->
-<div>
   <% current_user.i_follows.each do |f| %>
-    <div>
-    <%= f.i_follow_id %>
+  <% f.i_follow.scraps.each do |s| %> 
+
+    <div class="feed">
+    <div class="followerid">
+      <%= f.i_follow_id %>
     </div>
-    <br />
-    <% f.i_follow.scraps.each do |s| %> 
-      <%= s.body %>
+
+    <%= s.search_tag %>
+    <%= s.body %></div>
+
       <% end %>
       <% end %>
-</div>
 <br />
 <!-- renders scrap body END -->
-
   
 <% else %>
   <div class="container">
-    <div class="search"><input type="text" placeholder="search"></input></div>
+    <div class="search"><%= render :partial => 'scraps/search' %></div>
    <!--  <br />
     <div class="post"><input type="text" placeholder="post"></input></div>
   </div> -->
@@ -32,3 +29,7 @@
   <br />
   <%= render "users/form" %>
 <% end %>
+
+
+
+
