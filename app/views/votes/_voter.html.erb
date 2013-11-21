@@ -1,7 +1,5 @@
-<span class="glyphicon glyphicon-search"></span>
-
 <div id="vote">
-	<div id="voteup"><%= link_to " ", scrap_up_vote_path(scrap), class: 'icon-chevron-up' %></div>
+	<div id="voteup"><%= link_to "^", scrap_up_vote_path(scrap) %></div>
 	<div><strong><%= scrap.points %></strong></div>
-	<div id="votedown"><%= link_to " ", scrap_down_vote_path(scrap), class: 'icon-chevron-down' %></div>
+	<div id="votedown"><%= link_to "v", scrap_down_vote_path(scrap) %></div>
 </div>

@@ -129,19 +129,13 @@ input[type=submit] {
 #voteup {
 	height: 10px;
 	width: 10px;
-	background-color: red;
+	outline: red;
 }
 
 #votedown {
 	height: 10px;
 	width: 10px;
-	background-color: blue;
-}
-.icon-chevron-up {	
-
+	outline: blue;
 }
 
-.icon-chevron-down {
-
-}
 
