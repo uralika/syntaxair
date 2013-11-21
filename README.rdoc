@@ -1,2 +1,4 @@
 Search feature: https://we.riseup.net/rails/simple-search-tutorial
 
+Voting feature: https://www.bloc.io/example_checkpoint
+

@@ -3,15 +3,16 @@
 
 <!-- renders scrap body -->
   <% current_user.i_follows.each do |f| %>
-  <% f.i_follow.scraps.each do |s| %> 
 
-    <div class="feed">
+  <% f.i_follow.scraps.each do |s| %> 
+<a>
+   <div class="feed">
     <div class="followerid">
       <%= f.i_follow_id %>
     </div>
 
     <%= s.search_tag %>
-    <%= s.body %></div>
+    <%= s.body %></div></a>
 
       <% end %>
       <% end %>
