@@ -1,3 +1,6 @@
+@import 'bootstrap';
+@import 'bootstrap-responsive';
+
 body {
 	margin: 0;
 }
@@ -116,6 +119,19 @@ input[type=submit] {
 
 .center {
 	position: relative;
+
+}
+#vote {
+	height: 50px;
+	width: 50px;
+}
+
+.icon-chevron-up {
+	font-size: 12px;
+
+}
+
+.icon-chevron-down {
 
 }
 

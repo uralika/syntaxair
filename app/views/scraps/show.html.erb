@@ -1,3 +1,6 @@
+
+    <%= render partial: 'votes/voter', locals: { scrap: @scrap } %>
+
 <p>
   <strong>Search Tag:</strong>
   <%= @scrap.search_tag %>
@@ -8,5 +11,5 @@
   <%= @scrap.body %>
 </p>
 
-<%= link_to 'Edit', edit_scrap_path(@scrap) %> |
+<%= link_to 'Edit', edit_scrap_path(@scrap) %> 
 <%= link_to 'Back', scraps_path %>

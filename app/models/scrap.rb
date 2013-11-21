@@ -16,4 +16,16 @@ class Scrap < ActiveRecord::Base
 		# "Searched by #{@search_tag}, here: #{@body}"
 	end
 
+	def up_votes
+		self.votes.where(vote_number: 1).count
+	end
+
+	def down_votes
+		self.votes.where(vote_number: -1).count
+	end
+
+	def points
+		self.votes.sum(:vote_number).to_i
+	end
+
 end
