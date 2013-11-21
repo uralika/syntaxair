@@ -16,9 +16,8 @@
     <a href="/"><div class="branding_small"></div></a>
     <div id="home_logout">
       <div class="login">
-      <%= 'Welcome, ' + current_user[:email].to_s + "!" %>
-      <%= button_to "Log out", "/users/new", method: :delete %>
-      <%= button_to "Post scrap", "/scraps/new" %>
+      <h1 class="logged"><%= current_user[:email] %></h1>
+      <%= button_to "Log out", "/users/new", method: :delete, id: 'logoutbutton' %>
       </div>
     </div>
     <% else %>
@@ -37,12 +36,14 @@
   </div>
 
   <% if current_user %>
-    
+  <p><p/>
     <div class="container">
 
     <%= render :partial => 'scraps/search' %>
   
     </div>
+  <p class="hide">.<p/>
+<br />
 
   <% else %>
   

@@ -26,9 +26,13 @@ body {
 	margin-bottom: 1px;
 	border-radius: 3px;
 	color: gray;
-	font-family: Helvetica;
+	font-family: Monospace;
 	padding: 5px 20px 5px 20px;
 	border-bottom: 1
+}
+
+.hide {
+	opacity: 0;
 }
 
 .followerid{
@@ -42,7 +46,8 @@ body {
 	font-size: 25px;
 	color: white;
 	position: relative;
-	line-height: 50px;
+	line-height: 54px;
+	font-family: Mensch;
 }
 
 .branding {
@@ -107,11 +112,31 @@ input[type=submit] {
 	margin: 0;
 }
 
+.logged {
+	font-family: Mensch;
+	font-size: 15px;
+	letter-spacing: 3px;
+	color: rgba(200, 200, 200, .7);
+	line-height: 0px;
+	position: relative;
+	text-align: right;
+}
+
+#logoutbutton {
+	height: 20px;
+	width: 60px;
+	float: right;
+	padding-right: 7px;
+	text-align: center;
+	float: right;
+}
+
 .login {
 	height: 20px;
 	width: 250px;
 	float: right;
 	padding-right: 7px;
+	text-align: right;
 }
 
 .login input {
@@ -127,7 +152,8 @@ input[type=submit] {
 	height: 100px;
 	float: right;
 	margin-top: -50px;
-	margin-right: -65px;
+	position: relative;
+	right: 20px;
 
 }
 
