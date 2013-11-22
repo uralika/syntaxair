@@ -34,6 +34,12 @@ a:hover .feed {
 	border-bottom: 1;
 }
 
+#opacity-slider {
+	height: 5px;
+	width: 300px;
+	background-color: rgba(200, 0,);
+}
+
 .feedscrap {
 	position: absolute;
 	height: 100%;

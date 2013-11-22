@@ -8,11 +8,12 @@ $(function(){
 
      // Hover over size change
      $('.feed').on('mouseenter',function () {
-          $( this ).animate({ height:'200px' }, 100);
+          $( this ).animate({ height:'200px', 
+                               }, 150);
      });
 
      $('.feed').on('mouseleave',function () {
-          $( this ).animate({ height:'100px' }, 100);
+          $( this ).animate({ height:'100px' }, 150);
      });
      // Hover over size change
 
@@ -21,9 +22,8 @@ $(function(){
      $( ".feed" ).click(function() {
           $( this ).animate({
               opacity: 0.0,
-              left: "+=50",
-              height: "50px"
-          }, 200, function() {
+              height: "toggle"
+          }, 300, function() {
          // Animation complete.
        });
      });
@@ -43,31 +43,29 @@ $(function(){
 
      <% f.i_follow.scraps.each do |s| %> 
      <a>
-          <div class="container">
-               <div class="divwrapper">
-               <div class="feed">
+     <div class="container">  
+          <div class="feed">
+               
+               <div class="votenumber">
                     
-                    <div class="votenumber">
-                         
-                    </div>
-
-                    <div class="feedscrap">
-                         <div class="feedtag">
-                              <%= s.search_tag %>
-                         </div>
-                         <div class="feedbody">
-                              <%= s.body %>
-                         </div>
-                    </div>
-
-                    <div class="followerid">
-                         <%= f.i_follow_id %>
-                    </div>
-
                </div>
+
+               <div class="feedscrap">
+                    <div class="feedtag">
+                         <%= s.search_tag %>
+                    </div>
+                    <div class="feedbody">
+                         <%= s.body %>
+                    </div>
+               </div>
+
+               <div class="followerid">
+                    <%= f.i_follow_id %>
                </div>
           </div>
+     </div>
      </a>
+
 
      <% end %>
      <% end %>
