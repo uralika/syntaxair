@@ -142,7 +142,6 @@ input[type=submit] {
 }
 
 .newpost {
-	position: relative;
 	height: 30px;
 	width: 200px;
 	background-color: rgba(0, 200, 200, .02);
@@ -170,6 +169,7 @@ a .newpost {
 #homesearch {
 	position: absolute;
 	margin-left: 37px;
+	margin-top: -6px;
 }
 
 .feed {
@@ -179,7 +179,6 @@ a .newpost {
 	margin: 0 auto;
 	color: gray;
 	font-family: Monospace;
-	padding-bottom: 2px;
 }
 
 .votenumber {
@@ -211,7 +210,7 @@ a .newpost {
 
 .feedtag {
 	font-family: Mensch;
-	padding-top: 5px;
+	padding-top: 10px;
 	color: rgba(200, 200, 200, .9);
 }
 
