@@ -1,34 +1,91 @@
+<script type="text/javascript">
+// $( function(){
+   
+   
+
+// });
+$(function(){
+
+     // Hover over size change
+     $('.feed').on('mouseenter',function () {
+          $( this ).animate({ height:'200px', 
+                               }, 150);
+     });
+
+     $('.feed').on('mouseleave',function () {
+          $( this ).animate({ height:'100px' }, 150);
+     });
+     // Hover over size change
+
+
+     // Click to minimize
+     $( ".feed" ).click(function() {
+          $( this ).animate({
+              opacity: 0.0,
+              height: "toggle"
+          }, 300, function() {
+         // Animation complete.
+       });
+     });
+     // Click to minimize
+
+
+
+
+});
+</script>
+
+
 
 <% if current_user %>
+<!-- renders feed body -->
+     <% current_user.i_follows.each do |f| %>
 
-<!-- renders scrap body -->
-  <% current_user.i_follows.each do |f| %>
+     <% f.i_follow.scraps.each do |s| %> 
+     <a>
+     <div class="container">  
+          <div class="feed">
+               
+               <div class="votenumber">
+                    
+               </div>
 
-  <% f.i_follow.scraps.each do |s| %> 
-<a>
-   <div class="feed">
-    <div class="followerid">
-      <%= f.i_follow_id %>
-    </div>
+               <div class="feedscrap">
+                    <div class="feedtag">
+                         <%= s.search_tag %>
+                    </div>
+                    <div class="feedbody">
+                         <%= s.body %>
+                    </div>
+               </div>
 
-    <%= s.search_tag %>
-    <%= s.body %></div></a>
+               <div class="followerid">
+                    <%= f.i_follow_id %>
+               </div>
+          </div>
+     </div>
+     </a>
 
-      <% end %>
-      <% end %>
-<br />
-<!-- renders scrap body END -->
+
+     <% end %>
+     <% end %>
+
+<!-- renders feed body END -->
   
 <% else %>
-  <div class="container">
-    <div class="search"><%= render :partial => 'scraps/search' %></div>
-   <!--  <br />
-    <div class="post"><input type="text" placeholder="post"></input></div>
-  </div> -->
-  <br />
-  <br />
-  <br />
+
+     <div class="container">
+          <div class="search">
+               <%= render :partial => 'scraps/search' %>
+          </div>
+     </div>
+
+          <br />
+          <br />
+          <br />
+
   <%= render "users/form" %>
+
 <% end %>
 
 
