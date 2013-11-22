@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(version: 20131120194243) do
   end
 
   create_table "scraps", force: true do |t|
-    t.string   "body"
+    t.text   "body"
     t.string   "search_tag"
     t.integer  "vote_number"
     t.datetime "created_at"
