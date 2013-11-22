@@ -1,5 +1,5 @@
-<div id="vote">
-	<div id="voteup"><%= link_to "^", scrap_up_vote_path(scrap) %></div>
-	<div><strong><%= scrap.points %></strong></div>
+<div id="votenumber">
+	<div id="votenumber"><%= link_to "^", scrap_up_vote_path(scrap) %></div>
+	<div><%= scrap.points %></div>
 	<div id="votedown"><%= link_to "v", scrap_down_vote_path(scrap) %></div>
 </div>
