@@ -24,6 +24,7 @@ respond_to :html, :json
   def search_results
     @scraps = Scrap.search(params[:search])
     respond_with(@scrap)
+    Scrap.order('rank DESC')
   
     #render :search_results
   end
