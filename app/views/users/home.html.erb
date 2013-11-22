@@ -1,26 +1,37 @@
 <script type="text/javascript">
 // $( function(){
    
-//    $('.feed').on('mouseenter',function () {
-//         $( this ).css('height', '200px');
-//    });
-
-//    $('.feed').on('mouseleave',function () {
-//         $( this ).css('height', '100px');
-//    });
+   
 
 // });
 $(function(){
 
-$( ".feed" ).click(function() {
-  $( this ).animate({
-    opacity: 0.0,
-    left: "+=50",
-    height: "toggle"
-  }, 200, function() {
-    // Animation complete.
-  });
-});
+     // Hover over size change
+     $('.feed').on('mouseenter',function () {
+          $( this ).animate({ height:'200px' }, 100);
+     });
+
+     $('.feed').on('mouseleave',function () {
+          $( this ).animate({ height:'100px' }, 100);
+     });
+     // Hover over size change
+
+
+     // Click to minimize
+     $( ".feed" ).click(function() {
+          $( this ).animate({
+              opacity: 0.0,
+              left: "+=50",
+              height: "50px"
+          }, 200, function() {
+         // Animation complete.
+       });
+     });
+     // Click to minimize
+
+
+
+
 });
 </script>
 
