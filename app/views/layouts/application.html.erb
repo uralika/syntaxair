@@ -36,25 +36,28 @@
      <!-- end if statement -->
      </div>
 
-  <% if current_user %>
-  <p><p/>
-    <div class="container">
+     <% if current_user %>
+     
+          <p><p/>
 
-    <%= render :partial => 'scraps/search' %>
-  
-    </div>
-  <p class="hide">.<p/>
-<br />
+          <div class="container">
+               <%= render :partial => 'scraps/search' %>
+               <a href="/scraps/new" ><div class="newpost" ><!-- <br />add code --></div></a>
+          </div>
 
-  <% else %>
-  
-    <div class="container">
-      <a href="/"><div class="branding"></div></a>
-    </div>
-  <% end %>
+<!--           <p class="hide">.<p/>
+          <br /> -->
+
+     <% else %>
+       
+         <div class="container">
+           <a href="/"><div class="branding"></div></a>
+         </div>
+
+     <% end %>
 
 
-  <%= yield %>
+     <%= yield %>
 
 </body>
 </html>
