@@ -1,5 +1,9 @@
 require 'spec_helper'
 
 describe Vote do
-  pending "add some examples to (or delete) #{__FILE__}"
+  context "vote up or down" do
+    it "allows users to vote" do
+      @vote = Vote
+    end
+  end
 end
