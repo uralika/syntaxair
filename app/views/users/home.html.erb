@@ -1,3 +1,30 @@
+<script type="text/javascript">
+// $( function(){
+   
+//    $('.feed').on('mouseenter',function () {
+//         $( this ).css('height', '200px');
+//    });
+
+//    $('.feed').on('mouseleave',function () {
+//         $( this ).css('height', '100px');
+//    });
+
+// });
+$(function(){
+
+$( ".feed" ).click(function() {
+  $( this ).animate({
+    opacity: 0.0,
+    left: "+=50",
+    height: "toggle"
+  }, 200, function() {
+    // Animation complete.
+  });
+});
+});
+</script>
+
+
 
 <% if current_user %>
 <!-- renders feed body -->
@@ -6,6 +33,7 @@
      <% f.i_follow.scraps.each do |s| %> 
      <a>
           <div class="container">
+               <div class="divwrapper">
                <div class="feed">
                     
                     <div class="votenumber">
@@ -25,6 +53,7 @@
                          <%= f.i_follow_id %>
                     </div>
 
+               </div>
                </div>
           </div>
      </a>
