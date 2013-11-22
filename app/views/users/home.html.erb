@@ -44,14 +44,14 @@ $(function(){
 
      <% f.i_follow.scraps.each do |s| %> 
 
-     <a>
+     
      <div class="container"> 
           <div class="feed">
                
                <div class="votenumber">
                     
                </div>
-
+               <a>
                <div class="feedscrap">
                     <div class="feedtag">
                          <%= s.search_tag %>
@@ -60,13 +60,14 @@ $(function(){
                          <%= s.body %>
                     </div>
                </div>
+               </a>
 
                <div class="followerid">
                     <%= f.i_follow_id %>
                </div>
           </div>
      </div>
-     </a>
+     
 
      <% end %>
      <% end %>
