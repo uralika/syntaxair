@@ -3,7 +3,7 @@ class CreateScraps < ActiveRecord::Migration
     create_table :scraps do |t|
       t.text :body
       t.string :search_tag
-      t.integer :vote_number
+      #t.integer :vote_number
 
       t.timestamps
     end
