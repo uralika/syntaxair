@@ -21,6 +21,7 @@
                     </div>
                </div>
 
+
           <% else %>
           <!-- ELSE statement for login vs. logged in -->
                <div class="login">
@@ -38,16 +39,12 @@
 
      <% if current_user %>
      
-          <p><p/>
-
           <div class="container">
                <div id="homesearch"><%= render :partial => 'scraps/search' %></div>
+               <br />
                
-               <a href="/scraps/new" ><div class="newpost" ><!-- <br />add code --></div></a>
+               <a href="/scraps/new" ><div class="newpost" >add code</div></a>
           </div>
-
-<!--           <p class="hide">.<p/>
-          <br /> -->
 
      <% else %>
        

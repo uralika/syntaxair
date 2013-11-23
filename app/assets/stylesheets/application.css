@@ -18,6 +18,8 @@ a {
 }
 
 .branding_small {
+	position: relative;
+	right: 15px;
 	height: 50px;
 	width: 100%;
 	font-family: Mensch;
@@ -142,22 +144,26 @@ input[type=submit] {
 }
 
 .newpost {
-	height: 30px;
+	position: relative;
+	height: 25px;
 	width: 200px;
-	background-color: rgba(0, 200, 200, .02);
-	border: solid 1px rgba(250, 50, 50, .2);
+	top: 34px;
+	right: 15px;
+	border: solid 1px rgba(50, 50, 50, .1);
 	border-top: none;
-	border-radius: 0px 0px 15px 15px;
+	border-radius: 0px 0px 10px 10px;
 	margin: 0 auto;
-	margin-top: 2px;
-	margin-bottom: 25px;
+	margin-top: 10px;
+	margin-bottom: 45px;
 	font-family: Mensch;
-	color: white;
+	font-size: 20px;
+	padding-top: 10px;
+	padding-bottom: 0px;
 	text-align: center;
 }
 
 a .newpost {
-	color: gray;
+	color: rgba(50, 50, 50, .15);
 }
 
 .search {
@@ -169,7 +175,8 @@ a .newpost {
 #homesearch {
 	position: absolute;
 	margin-left: 37px;
-	margin-top: -6px;
+	margin-top: 10px;
+	margin-bottom: 3px;
 }
 
 .feed {
@@ -214,6 +221,15 @@ a .newpost {
 	color: rgba(200, 200, 200, .9);
 }
 
+.feedbody p::first-line {
+	text-indent: 0;
+}
+
+.feedbody {
+	margin-top: -40px;
+	white-space: pre-wrap;
+}
+
 .followerid{
 	height: 50px;
 	width: 50px;
@@ -238,7 +254,17 @@ a:hover .feedscrap {
 	position: relative;
 	margin: 0 auto;
 }
+
+#indent {
+	text-indent:0px;
+	text-align: left;	
+}
+
 /*....................HOMEPAGE...........................*/
+
+/*....................FRONT SIGNUP...........................*/
+
+
 
 
 

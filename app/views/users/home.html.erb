@@ -8,7 +8,7 @@ $(function(){
 
      // Hover over size change
      $('.feed').on('mouseenter',function () {
-          $( this ).animate({ height:'200px', 
+          $( this ).animate({ height:'300px', 
                                }, 150);
      });
 
@@ -57,7 +57,7 @@ $(function(){
                          <%= s.search_tag %>
                     </div>
                     <div class="feedbody">
-                         <%= s.body %>
+                         <p><%= s.body %></p>
                     </div>
                </div>
                </a>
@@ -66,8 +66,7 @@ $(function(){
                     <%= f.i_follow_id %>
                </div>
           </div>
-     </div>
-     
+     </div> 
 
      <% end %>
      <% end %>
