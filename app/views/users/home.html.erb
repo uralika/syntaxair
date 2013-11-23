@@ -8,7 +8,7 @@ $(function(){
 
      // Hover over size change
      $('.feed').on('mouseenter',function () {
-          $( this ).animate({ height:'200px', 
+          $( this ).animate({ height:'300px', 
                                }, 150);
      });
 
@@ -38,39 +38,46 @@ $(function(){
 
 
 <% if current_user %>
+
 <!-- renders feed body -->
      <% current_user.i_follows.each do |f| %>
 
      <% f.i_follow.scraps.each do |s| %> 
-     <a>
-     <div class="container">  
+
+     
+     <div class="container"> 
           <div class="feed">
                
                <div class="votenumber">
                     
                </div>
-
+               <a>
                <div class="feedscrap">
                     <div class="feedtag">
                          <%= s.search_tag %>
                     </div>
                     <div class="feedbody">
-                         <%= s.body %>
+                         <p><%= s.body %></p>
                     </div>
                </div>
+               </a>
 
                <div class="followerid">
                     <%= f.i_follow_id %>
                </div>
           </div>
      </div>
-     </a>
-
 
      <% end %>
      <% end %>
+
+     <p></p>
+     <br />
+     <p></p>
+     
 
 <!-- renders feed body END -->
+
   
 <% else %>
 
