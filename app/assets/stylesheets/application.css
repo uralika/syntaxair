@@ -143,6 +143,12 @@ input[type=submit] {
 	margin: 0 auto;
 }
 
+.container_signup {
+	height: 100%;
+	width: 500px;
+	margin: 0 auto;
+}
+
 .newpost {
 	position: relative;
 	height: 25px;

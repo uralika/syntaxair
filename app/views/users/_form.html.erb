@@ -1,6 +1,6 @@
 <%= form_for User.new do |u| %>
 
-<div class='container signup'>
+<div class='container_signup signup'>
   <%=u.text_field :email, placeholder: 'email' %><br />
   <%=u.password_field :password, placeholder: 'password' %><br />
   <%=u.password_field :password_confirmation, placeholder: 'confirm password'%><br />
