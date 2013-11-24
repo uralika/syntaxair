@@ -17,10 +17,29 @@ $(function(){
      });
      // Hover over size change
 
+     // Hover Delete
+     $('.minimize').on('mouseenter',function () {
+          $( this ).animate({ opacity:'.3' }, 150);
+     });
 
+     $('.minimize').on('mouseleave',function () {
+          $( this ).animate({ opacity:'.0' }, 150);
+     });
+     // Hover Delete
+
+     // $( ".votenumberup" ).click(function() {
+     //      $( this ).animate({
+     //          opacity: .3,
+     //          opacity: "toggle"
+     //      }, 300, function() {
+     //     // Animation complete.
+     //   });
+     // });
+
+     
      // Click to minimize
-     $( ".feed" ).click(function() {
-          $( this ).animate({
+     $( ".minimize" ).click(function() {
+          $( this ).parents('.feed').animate({
               opacity: 0.0,
               height: "toggle"
           }, 300, function() {
@@ -29,6 +48,35 @@ $(function(){
      });
      // Click to minimize
 
+
+
+     $('.votenumberup').click(function() {
+          if ($(this).is('.votenumberdown_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberup_clicked');
+          }
+     });
+
+     $('.votenumberdown').click(function() {
+          if ($(this).is('.votenumberup_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberdown_clicked');
+          }
+     });
+
+     // $('.votenumberdown').click(function() {
+     //      $(this).toggleClass('votenumberdown_clicked');
+     // });
+
+     // $('.votenumberup').click(function() {
+          // if ($(.votenumberdown).is('.votenumberup_clicked')) {
+     //           return 'votenumberup';
+     //      } else {
+     //           return 'votenumberup_clicked';
+     //      }
+     // });
 
 
 
@@ -61,6 +109,9 @@ $(function(){
                     </div>
                     <div class="feedbody">
                          <p><%= s.body %></p>
+                    </div>
+                    <div class="minimize">
+                         <h1>X</h1>
                     </div>
                </div>
                </a>
