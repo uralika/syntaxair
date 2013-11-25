@@ -1,0 +1,7 @@
+<div class="container container_new">
+  <%= form_for @scrap do |s| %>
+  <%= s.text_field :search_tag, placeholder: 'add tag', class: 'tag' %><br />
+  <p id="indent"><%= s.text_area :body, placeholder: 'add code', class: 'addcode' %></p><br />
+  <%= s.submit %>
+  <% end %>
+</div>

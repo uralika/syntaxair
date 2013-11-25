@@ -99,7 +99,7 @@ $(function(){
                <a>
                <div class="feedscrap">
                     <div class="feedtag">
-                         <%= s.search_tag %>
+                         <%= link_to s.search_tag, scrap_path(s), class: 'showlinks' %>
                     </div>
                     <div class="feedbody">
                          <p><%= s.body %></p>

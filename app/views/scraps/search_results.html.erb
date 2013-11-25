@@ -95,13 +95,11 @@ $(function(){
                <a>
                <div class="feedscrap">
                     <div class="feedtag">
-                         <%= s.search_tag %>
+                         <%= link_to s.search_tag, scrap_path(s), class: 'showlinks' %>
                     </div>
-                    <%= link_to scrap_path(s), class: 'showlinks' do %>
                     <div class="feedbody">
                          <p><%= s.body %></p>
                     </div>
-                    <% end %>
                     <div class="minimize">
                          <h1>X</h1>
                     </div>
@@ -119,14 +117,6 @@ $(function(){
 <br />
 <p></p>
 
-
-
-
-<ul>
-  <% @scraps.each do |scrap| %>
-<li><%= link_to scrap.search_tag, scrap_path(scrap)  %></li>
-  <% end %>
-</ul>
 
 <% if current_user %>
 

@@ -361,7 +361,7 @@ a:hover .feedscrap {
 
 .showlinks {
 	text-decoration: none;
-	color: gray;	
+	color: rgba(190, 190, 190, .9);
 }
 
 
