@@ -357,11 +357,12 @@ a:hover .feedscrap {
 	padding-right: 5px;
 }
 
-.create {
-	height: 200px;
-	background-color: pink;
-}
+/*....................SHOW PAGE...........................*/
 
+.showlinks {
+	text-decoration: none;
+	color: gray;	
+}
 
 
 
