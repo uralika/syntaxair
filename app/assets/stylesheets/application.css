@@ -194,6 +194,10 @@ a .newpost {
 	font-family: Monospace;
 }
 
+.feedshow {
+	height: 2000px;
+}
+
 .votenumberup {
 	position: relative;
 	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/Up.png);

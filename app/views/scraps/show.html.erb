@@ -1,15 +1,18 @@
-
-    <%= render partial: 'votes/voter', locals: { scrap: @scrap } %>
-
-<p>
-  <strong>Search Tag:</strong>
-  <%= @scrap.search_tag %>
-</p>
-
-<p>
-  <strong>Code Scrap:</strong>
-  <%= @scrap.body %>
-</p>
+<div class="container"> 
+      <div class="feed feedshow">
+            <%= render partial: 'votes/voter', locals: { scrap: @scrap } %>
+            <a>
+            <div class="feedscrap">
+                  <div class="feedtag">
+                        <%= @scrap.search_tag %>
+                  </div>
+                  <div class="feedbody">
+                        <p><%= @scrap.body %></p>           
+                  </div>
+            </div>
+            </a>
+      </div>
+</div>
 
 <%= link_to 'Edit', edit_scrap_path(@scrap) %> 
 <%= link_to 'Back', scraps_path %>
