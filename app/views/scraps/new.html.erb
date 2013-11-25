@@ -1,7 +1,7 @@
-<div class="container_signup">
+<div class="container container_new">
   <%= form_for @scrap do |s| %>
-  <%= s.text_field :search_tag, placeholder: 'Search Tag' %><br />
-  <p id="indent"><%= s.text_area :body, placeholder: 'Code Scrap' %></p><br />
+  <%= s.text_field :search_tag, placeholder: 'add tag', class: 'tag' %><br />
+  <p id="indent"><%= s.text_area :body, placeholder: 'add code', class: 'addcode' %></p><br />
   <%= s.submit %>
   <% end %>
 </div>

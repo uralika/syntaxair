@@ -1,13 +1,115 @@
-Scraps!
+<script type="text/javascript">
+// $( function(){
+   
+   
+
+// });
+$(function(){
+
+     // Hover over size change
+     $('.feed').on('mouseenter',function () {
+          $( this ).animate({ height:'300px', 
+                               }, 150);
+     });
+
+     $('.feed').on('mouseleave',function () {
+          $( this ).animate({ height:'100px' }, 150);
+     });
+     // Hover over size change
+
+     // Hover Delete
+     $('.minimize').on('mouseenter',function () {
+          $( this ).animate({ opacity:'.3' }, 250);
+     });
+
+     $('.minimize').on('mouseleave',function () {
+          $( this ).animate({ opacity:'.0' }, 250);
+     });
+     // Hover Delete
+
+     // $( ".votenumberup" ).click(function() {
+     //      $( this ).animate({
+     //          opacity: .3,
+     //          opacity: "toggle"
+     //      }, 300, function() {
+     //     // Animation complete.
+     //   });
+     // });
+
+     
+     // Click to minimize
+     $( ".minimize" ).click(function() {
+          $( this ).parents('.feed').animate({
+              opacity: 0.0,
+              height: "toggle"
+          }, 300, function() {
+         // Animation complete.
+       });
+     });
+     // Click to minimize
+
+
+
+     $('.votenumberup').click(function() {
+          if ($(this).is('.votenumberdown_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberup_clicked');
+          }
+     });
+
+     $('.votenumberdown').click(function() {
+          if ($(this).is('.votenumberup_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberdown_clicked');
+          }
+     });
+
+     // $('.votenumberdown').click(function() {
+     //      $(this).toggleClass('votenumberdown_clicked');
+     // });
+
+     // $('.votenumberup').click(function() {
+          // if ($(.votenumberdown).is('.votenumberup_clicked')) {
+     //           return 'votenumberup';
+     //      } else {
+     //           return 'votenumberup_clicked';
+     //      }
+     // });
+
+
+
+});
+</script>
+
+
+
+
+
 
 <% @scraps.each do |s| %>
-
-<p><%= s.body %>.
-	<%= link_to 'Show', s %>
-
-<%= link_to 'Destroy', s, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+  <div class="container"> 
+            <div class="feed"> 
+                 <%= render partial: 'votes/voter', locals: { scrap: @scrap } %>
+                 <a>
+                 <div class="feedscrap">
+                      <div class="feedtag">
+                           <%= s.search_tag %>
+                      </div>
+                      <div class="feedbody">
+                           <p><%= s.body %></p>
+                      </div>
+                      <div class="minimize">
+                           <h1>X</h1>
+                      </div>
+                 </div>
+                 </a>
+            </div>
+       </div>
 
 <% end %>
 
+<p></p>
 <br />
-<%= link_to 'New Scrap', new_scrap_path %>
+<p></p>
