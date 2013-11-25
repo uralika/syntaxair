@@ -124,11 +124,15 @@ $(function(){
 
 <%= form_for User.new do |u| %>
 
-<div class='container signup'>
-  <%=u.text_field :email, placeholder: 'email' %><br />
-  <%=u.password_field :password, placeholder: 'password' %><br />
-  <%=u.password_field :password_confirmation, placeholder: 'confirm password'%><br />
-  <div class='center'><%= u.submit %><div> 
+<div class="container">
+     <div class="signsearch">
+          <div class='container_new signup'>
+               <%=u.text_field :email, placeholder: 'email' %><br />
+               <%=u.password_field :password, placeholder: 'password' %><br />
+               <%=u.password_field :password_confirmation, placeholder: 'confirm password'%><br />
+               <div class='center'><%= u.submit %><div> 
+          </div>
+     </div>
 </div>
 
 <% end %>

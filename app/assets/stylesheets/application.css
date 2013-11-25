@@ -160,6 +160,11 @@ input[type=submit] {
 	right: 13px;
 }
 
+.signsearch {
+	position: absolute;
+	margin-left: 45px;
+}
+
 .newpost {
 	position: relative;
 	height: 25px;
@@ -411,10 +416,35 @@ a:hover .feedscrap {
 	opacity: .1;
 }
 
+/*....................HOME PAGE SIDE NAV...........................*/
 
+/*....................USERS INDEX PAGE...........................*/
 
+.user_email {
+	font-family: Mensch;
+	font-size: 20px;
+	margin-top: 25px;
+	color: rgba(100, 100, 100, .5);
+}
 
+.follow_user2 {
+	border: solid 1px rgba(0, 200, 200, .4);
+	background-color: white;
+	text-decoration: none;
+	border-radius: 100%;
+	height: 50px;
+	width: 50px;
+}
 
+.addFollow {
+	text-decoration: none;
+	color: rgba(0, 200, 200, .4);
+	font-size: 40px;
+	margin-top: -8px;
+	margin-left: -1px;
+}
+
+/*....................USERS INDEX PAGE...........................*/
 
 #vote {
 	height: 50px;

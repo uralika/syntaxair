@@ -1,10 +1,13 @@
-<p id="notice"><%= notice %></p>
+<div class="container_signup">
+  <p id="notice"><%= notice %></p>
 
 <% @users.each do |follow| %>
 
-<%= follow.email %>
+<div class="user_email"><%= follow.email %></div>
 
-<%= button_to "+", "/users/#{follow.id}/i_follow", method: :post %>
-<br />
+<%= button_to "/users/#{follow.id}/i_follow", method: :post, class: 'follow_user2' do  %>
+<div class="addFollow">+</div>
+<% end %>
 
 <% end %>
+</div>
