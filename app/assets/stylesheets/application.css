@@ -365,7 +365,51 @@ a:hover .feedscrap {
 }
 
 
+/*....................HOME PAGE SIDE NAV...........................*/
 
+.side_Container {
+	position: fixed;
+	height: 100%;
+	width: 250px;
+	top: 0px;
+	opacity: 0;
+}
+
+.homecode {
+	position: fixed;
+	height: 50px;
+	width: 150px;
+	top: 65px;
+	left: 15px;
+	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/cloudcode.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	opacity: .1;
+}
+
+.homefollow {
+	position: fixed;
+	height: 50px;
+	width: 140px;
+	top: 115px;
+	left: 15px;
+	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/users.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	opacity: .1;
+}
+
+.homefeed {
+	position: fixed;
+	height: 50px;
+	width: 130px;
+	top: 182px;
+	left: 15px;
+	background-image: url(http://cinegrain.com/wp-content/uploads/2013/11/feed.png);
+	background-size: 50%;
+	background-repeat: no-repeat;
+	opacity: .1;
+}
 
 
 

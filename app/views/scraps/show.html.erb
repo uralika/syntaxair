@@ -1,3 +1,33 @@
+<script type="text/javascript">
+// $( function(){
+   
+   
+
+// });
+$(function(){
+
+     $('.votenumberup').click(function() {
+          if ($(this).is('.votenumberdown_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberup_clicked');
+          }
+     });
+
+     $('.votenumberdown').click(function() {
+          if ($(this).is('.votenumberup_clicked')) {
+
+          } else {
+               $(this).toggleClass('votenumberdown_clicked');
+          }
+     });
+
+
+});
+</script>
+
+
+
 <div class="container"> 
       <div class="feed feedshow">
             <%= render partial: 'votes/voter', locals: { scrap: @scrap } %>

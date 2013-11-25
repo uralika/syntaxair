@@ -20,8 +20,7 @@
                          <%= button_to "Log out", "/users/new", method: :delete, id: 'logoutbutton' %>
                     </div>
                </div>
-
-
+               
           <% else %>
           <!-- ELSE statement for login vs. logged in -->
                <div class="login">
@@ -38,6 +37,12 @@
      </div>
 
      <% if current_user %>
+          
+          <div class="side_Container">
+               <a href="/scraps/"><div class="homecode"></div></a>
+               <a href="/users/"><div class="homefollow"></div></a>
+               <a href="/"><div class="homefeed"></div></a>
+          </div>
      
           <div class="container">
                <div id="homesearch"><%= render :partial => 'scraps/search' %></div>
@@ -59,3 +64,24 @@
 
 </body>
 </html>
+
+<script type="text/javascript">
+// $( function(){
+   
+   
+
+// });
+$(function(){
+
+     // Hover Delete
+     $('.side_Container').on('mouseenter',function () {
+          $( this ).animate({ opacity:'1' }, 450);
+     });
+
+     $('.side_Container').on('mouseleave',function () {
+          $( this ).animate({ opacity:'.0' }, 450);
+     });
+
+
+});
+</script>
